@@ -1,0 +1,166 @@
+ 
+ /* header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 40px;
+  border-bottom: 5px solid #FFD700;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+} */
+
+.logoi img {
+  width: 90px; /* increase width of the second image */
+  height: 90px;
+  /* display: block; */
+  margin: 0 auto;
+  align-items:center;
+}
+   
+ 
+
+
+ header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 40px;
+  border-bottom: 5px solid #FFD700;
+  flex-wrap: wrap;
+}
+
+.left-images {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-img {
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.hotel-img {
+  width: 1390px;
+  height: 350px;
+}
+
+.contact-info {
+  text-align: right;
+  color: #FFD700;
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: auto;
+}
+
+/* .menu-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .menu-card {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      padding: 15px;
+      text-align: center;
+    }
+    .menu-card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .menu-card h3 {
+      margin: 10px 0 5px;
+    }
+    .menu-card input[type="number"] {
+      width: 60px;
+      margin-top: 10px;
+    }
+    .form-section {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      margin: 20px;
+      border-radius: 10px;
+    }
+    select, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    #total {
+      font-size: 18px;
+      font-weight: bold;
+    } */
+
+
+   .menu-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .menu-card {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      padding: 15px;
+      text-align: center;
+    }
+
+    .menu-card img {
+      max-width: 100%;
+      border-radius: 10px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .menu-card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .menu-card input[type="number"] {
+      width: 60px;
+      margin-top: 10px;
+    }
+
+    .form-section {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    select, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+
+    #total {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .payment-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .payment-button:hover {
+      background-color: #45a049;
+    } 
