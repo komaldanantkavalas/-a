@@ -1,0 +1,163 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel QR Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- <img src=".vscode/newlogokomal.jpg" alt="logo" class="logo-img" />  -->
+            <img src=".vscode/hotel.jpg" alt="Hotel Image" class="hotel-img" />
+        </div>
+
+        <div class="logoi">
+            <img src=".vscode/newlogokomal.jpg" alt="logo" class="logo-img" /> 
+        </div>
+        
+       <div class="contact-info">
+         <p>📍 Shivaji Nagar, kurduwadi</p>
+         <p>📞 8668428033</p>
+      </div>
+    </header>
+
+    <!-- <form id="orderForm">
+    <div class="menu-section">
+      <div class="menu-card">
+        <img src="images/paneer.jpg" alt="Paneer Butter Masala" />
+        <h3>Paneer Butter Masala</h3>
+        <p>₹180</p>
+        <input type="number" min="0" value="0" data-price="180" required />
+      </div>
+
+      <div class="menu-card">
+        <img src="images/biryani.jpg" alt="Chicken Biryani" />
+        <h3>Chicken Biryani</h3>
+        <p>₹200</p>
+        <input type="number" min="0" value="0" data-price="200" required />
+      </div>
+
+      <div class="menu-card">
+        <img src="images/dosa.jpg" alt="Masala Dosa" />
+        <h3>Masala Dosa</h3>
+        <p>₹90</p>
+        <input type="number" min="0" value="0" data-price="90" required />
+      </div>
+    </div>
+
+    <div class="form-section">
+      <label for="tableNo">Table No (1-100): </label>
+      <select id="tableNo" required>
+        <option value="">Select</option>
+        <script>
+          for (let i = 1; i <= 100; i++) {
+            document.write(`<option value="${i}">${i}</option>`);
+          }
+        </script>
+      </select>
+      <div id="total">Total: ₹0</div>
+      <button type="submit">Place Order</button>
+      <br />
+      <a href="https://rzp.io/l/samplepayment" target="_blank" class="payment-button">Proceed to Payment</a>
+    </div>
+  </form> -->
+
+
+  <form id="orderForm">
+    <!-- 🍗 Non-Veg Section -->
+    <h2 style="color: darkred;">🍗 Non-Veg</h2>
+    <div class="menu-section">
+      <div class="menu-card">
+        <img src=".vscode/chicken.jpg" alt="Chicken Biryani" />
+        <h3>Chicken Biryani</h3>
+        <p>₹200</p>
+        <input type="number" min="0" value="0" data-price="200" required />
+      </div>
+      <div class="menu-card">
+        <img src=".vscode/tandoori.jpg" alt="Tandoori Chicken" />
+        <h3>Tandoori Chicken</h3>
+        <p>₹250</p>
+        <input type="number" min="0" value="0" data-price="250" required />
+      </div>
+    </div>
+
+    <!-- 🥗 Veg Section -->
+    <h2 style="color: green;">🥗 Veg</h2>
+    <div class="menu-section">
+      <div class="menu-card">
+        <img src=".vscode/paneer.jpg" alt="Paneer Butter Masala" />
+        <h3>Paneer Butter Masala</h3>
+        <p>₹180</p>
+        <input type="number" min="0" value="0" data-price="180" required />
+      </div>
+      <div class="menu-card">
+        <img src=".vscode/vrg thali.jpg" alt="Veg Thali" />
+        <h3>Veg Thali</h3>
+        <p>₹160</p>
+        <input type="number" min="0" value="0" data-price="160" required />
+      </div>
+    </div>
+
+    <!-- 🍳 Breakfast Section -->
+    <h2 style="color: orange;">🍳 Breakfast</h2>
+    <div class="menu-section">
+      <div class="menu-card">
+        <img src=".vscode/paneer.jpg" alt="Masala Dosa" />
+        <h3>Masala Dosa</h3>
+        <p>₹90</p>
+        <input type="number" min="0" value="0" data-price="90" required />
+      </div>
+      <div class="menu-card">
+        <img src=".vscode/idli.jpg" alt="Idli Sambar" />
+        <h3>Idli Sambar</h3>
+        <p>₹70</p>
+        <input type="number" min="0" value="0" data-price="70" required />
+      </div>
+    </div>
+
+    <!-- 💳 Table & Payment -->
+    <div class="form-section">
+      <label for="tableNo">Table No (1-100): </label>
+      <select id="tableNo" required>
+        <option value="">Select</option>
+        <script>
+          for (let i = 1; i <= 100; i++) {
+            document.write(`<option value="${i}">${i}</option>`);
+          }
+        </script>
+      </select>
+      <div id="total">Total: ₹0</div>
+      <button type="submit">Place Order</button>
+      <br />
+      <a href="https://rzp.io/l/samplepayment" target="_blank" class="payment-button">Proceed to Payment</a>
+    </div>
+  </form>
+
+  <script>
+    const inputs = document.querySelectorAll("input[type='number']");
+    const totalDisplay = document.getElementById("total");
+    const form = document.getElementById("orderForm");
+
+    inputs.forEach(input => {
+      input.addEventListener("input", calculateTotal);
+    });
+
+    function calculateTotal() {
+      let total = 0;
+      inputs.forEach(input => {
+        total += parseInt(input.value || 0) * parseFloat(input.dataset.price);
+      });
+      totalDisplay.textContent = `Total: ₹${total}`;
+    }
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Order placed successfully!");
+    });
+  </script>
+    
+
+</body>
+<head> 
